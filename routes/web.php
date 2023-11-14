@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Pemanggilan Untuk Folder Layouts
 Route::get('/', function () {
+    return view('layouts.landing');
+});
+
+Route::get('/beranda', function () {
     return view('layouts.beranda');
 });

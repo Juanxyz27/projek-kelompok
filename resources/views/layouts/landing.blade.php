@@ -10,7 +10,7 @@
     @vite(['resources/sass/app.scss','resources/js/app.js'])
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,12 +34,64 @@
                 <a class="nav-link" href="#">Link</a>
               </li>
             </ul> --}}
-            <div class="d-flex px-2 grid gap-2">
+            <div class="ms-auto">
               <button class="btn btn-outline-success" type="submit">Login</button>
               <button class="btn btn-outline-success" type="submit">Register</button>
             </div>
           </div>
         </div>
       </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card-deck">
+
+            <div class="card border-secondary mb-3" style="width: 20rem;">
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Judul Secondary Card</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at.</p>
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="width: 20rem;">
+              <div class="card-body text-secondary">
+                  <h5 class="card-title">Judul Secondary Card</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at.</p>
+              </div>
+          </div>
+
+          <div class="card border-secondary mb-3" style="width: 20rem;">
+            <div class="card-body text-secondary">
+                <h5 class="card-title">Judul Secondary Card</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at.</p>
+            </div>
+        </div>
+
+        <div class="card border-secondary mb-3" style="width: 20rem;">
+          <div class="card-body text-secondary">
+              <h5 class="card-title">Judul Secondary Card</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at.</p>
+          </div>
+      </div>
+
+      <div class="card border-secondary mb-3" style="width: 20rem;">
+        <div class="card-body text-secondary">
+            <h5 class="card-title">Judul Secondary Card</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at.</p>
+        </div>
+    </div>
+
+    <div class="card border-secondary mb-3" style="width: 20rem;">
+      <div class="card-body text-secondary">
+          <h5 class="card-title">Judul Secondary Card</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at.</p>
+      </div>
+  </div>
+
+            </div>
+        </div>
+    </div>
+      
 </body>
 </html>
