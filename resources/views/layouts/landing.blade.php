@@ -34,9 +34,9 @@
                 <a class="nav-link" href="#">Link</a>
               </li>
             </ul> --}}
-            <div class="ms-auto">
-              <button class="btn btn-outline-success" type="submit">Login</button>
-              <button class="btn btn-outline-success" type="submit">Register</button>
+            <div class="ms-auto ">
+              <a href="/login" type="button" class="text-success text-decoration-none px-3">Login</a>
+              <a href="/register" type="button" class="text-success text-decoration-none px-3">Register</a>
             </div>
           </div>
         </div>
