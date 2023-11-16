@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// untuk keranjang belanjaan
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,12 +44,36 @@ Route::post('/logout', function(){
 })->name('logout')->middleware('auth');
 Route::view('/dashboard', 'dashboard')->name('dashboard')->middleware('auth');
 // ====================================================================
+// Router keranjang belanjaan
 
 
+
+
+
+
+
+
+
+
+
+
+
+// ====================================================================
 // Route::view('/register', function () {
 //     return('auth.register');
 // });
 
 Route::get('/', function () {
     return view('layouts.landing');
+});
+
+
+
+//untuk memanggilan suatu halaman
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/beranda', function(){
+    return view('layouts.beranda');
 });
