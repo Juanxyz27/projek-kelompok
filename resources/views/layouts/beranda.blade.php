@@ -40,15 +40,15 @@
                 </ul>
               </li> --}}
             </ul>
-            <div class="px-3">
-              <a href="/dashboard" class="text-black">
-                <i class="fa-solid fa-user"></i>
+            {{-- icon user and cart --}}
+            <div class="px-3 d-flex align-items-center">
+              <a href="/dashboard" class="text-black me-3">
+                <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="img-fluid rounded-circle mx-auto" style="width: 25px; height: 25px;">
               </a>
-              <a href="">
-                <i class="fa-solid fa-cart-shopping"></i>
-                @yield('content')
+              <a href="/" class="text-black me-3">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
               </a>
-            </div>
+            </div>            
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Cari Produk" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
@@ -56,6 +56,10 @@
           </div>
         </div>
       </nav>
+
+
+      {{-- kolom produk --}}
+     
 
 </body>
 </html>

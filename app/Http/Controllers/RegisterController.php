@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Creativeorange\Gravatar\Facades\Gravatar;
 
 class RegisterController extends Controller
 {
@@ -28,6 +29,10 @@ class RegisterController extends Controller
         'email' => $request->email,
         'password' => Hash::make($request->password),
     ]);
+
+    // Set avatar for the user based on email using Gravatar
+    $avatar = Gravatar::get($user->email);
+    $user->update(['avatar' => $avatar]);
 
     if (Auth::attempt(['email' => $user->email, 'password' => $request->password])) {
         $request->session()->regenerate();

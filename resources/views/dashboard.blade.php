@@ -27,7 +27,7 @@
       <div class="container-fluid">
         <a class="navbar-brand fw-bold fs-5" href="#">
           <i class="fa-regular fa-address-card"></i>
-          Profile
+          Profile Details
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -44,27 +44,22 @@
     </nav>
 
     {{-- Tombol ke beranda --}}
-    <div class="mt-3 px-5">
+    <div class="mt-4 px-5">
       <a href="/beranda" class="text-black text-decoration-none">
         <i class="fa-solid fa-arrow-left fa-xl"></i>
         Beranda
       </a>
     </div>
 
-    <div class="container mt-5 flex bg-light px-5 py-3 border border-black rounded">
-      <div class="flex">
-        <div class=" flex text-black fw-bold align-items-center">
-          <h2>🙌Selamat Datang 
-            <span class="text-success">{{ auth()->user()->name }}</span>
-          </h2>
-        </div>
-      </div>
-    </div>
+ {{-- Detail Profile --}}
+ <div class="card text-center mt-3">
+  <div class="card-body">
+    <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="img-fluid rounded-circle mx-auto" style="width: 150px; height: 150px;">
+    <h2>{{ auth()->user()->name }}</h2>
+    <p><strong>Email:</strong> {{ auth()->user()->email }}</p>
+  </div>
+</div>
 
-
-
-    
-    
 
 </body>
 </html>

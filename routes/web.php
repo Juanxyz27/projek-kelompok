@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// untuk keranjang belanjaan
-use App\Http\Controllers\CartController;
-
+// Tambahan Untuk Admin
+use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,8 +43,13 @@ Route::post('/logout', function(){
     return redirect('/');
 })->name('logout')->middleware('auth');
 Route::view('/dashboard', 'dashboard')->name('dashboard')->middleware('auth');
+
+// membuat fungsi untuk profile
+Route::get('/user/{name}/avatar', 'UserController@createAvatar');
+
 // ====================================================================
-// Router keranjang belanjaan
+// Router Admin Login
+
 
 
 
@@ -62,18 +67,35 @@ Route::view('/dashboard', 'dashboard')->name('dashboard')->middleware('auth');
 // Route::view('/register', function () {
 //     return('auth.register');
 // });
-
-Route::get('/', function () {
-    return view('layouts.landing');
-});
-
-
-
-//untuk memanggilan suatu halaman
+// ====================================================================
+// Untuk DashBoard Admin dan User
 Route::get('/dashboard', function () {
     return view('dashboard');
+});
+
+Route::get('/DashboardAdmin', function(){
+    return view('DashboardAdmin');
+});
+// ====================================================================
+// Rute di dalam folder ataupun di luar dari folder
+Route::get('/', function () {
+    return view('layouts.landing');
 });
 
 Route::get('/beranda', function(){
     return view('layouts.beranda');
 });
+
+Route::get('/keranjang', function(){
+    return view('layouts.keranjang');
+});
+
+Route::get('/login', function(){
+    return view('auth.login');
+});
+
+Route::get('/register', function(){
+    return view('auth.register');
+});
+
+// ====================================================================
