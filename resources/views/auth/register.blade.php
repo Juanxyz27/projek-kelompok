@@ -56,11 +56,8 @@
                             {{ $message }}
                         </div>
                         @enderror
-                  <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
-                    <label class="form-check-label" for="rememberPasswordCheck">
-                      Remember password
-                    </label>
+                  <div class="form-check">
+                    <p>already have an account <a href="/login">Sign In</a></p>
                   </div>
                   <div class="d-grid">
                     <button class="btn btn-primary btn-login text-uppercase fw-bold rounded-pill" type="submit">Sign

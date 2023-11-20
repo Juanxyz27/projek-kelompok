@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 // Tambahan Untuk Admin
-use App\Http\Controllers\AdminAuthController;
-use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,9 +47,6 @@ Route::get('/user/{name}/avatar', 'UserController@createAvatar');
 
 // ====================================================================
 // Router Admin Login
-
-
-
 
 
 
