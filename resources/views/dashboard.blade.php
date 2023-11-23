@@ -23,42 +23,86 @@
     </div> --}}
 
     {{-- bagian navbar --}}
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom px-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 border-bottom border-dark-subtle">
       <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-5" href="#">
-          <i class="fa-regular fa-address-card"></i>
-          Profile Details
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="ms-auto ">
-            <form action="{{ route('logout') }}" method="post">
-              @csrf
-              <input type="submit" class="btn btn-outline-dark" value="Logout">
-          </form>
-          </div>
-        </div>
+        <a class="navbar-brand fw-bold fs-5" href="#">Profile </a>
       </div>
     </nav>
 
-    {{-- Tombol ke beranda --}}
-    <div class="mt-4 px-5">
-      <a href="/beranda" class="text-black text-decoration-none">
-        <i class="fa-solid fa-arrow-left fa-xl"></i>
-        Beranda
-      </a>
-    </div>
-
  {{-- Detail Profile --}}
- <div class="card text-center mt-3">
-  <div class="card-body">
-    <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="img-fluid rounded-circle mx-auto" style="width: 150px; height: 150px;">
-    <h2>{{ auth()->user()->name }}</h2>
-    <p><strong>Email:</strong> {{ auth()->user()->email }}</p>
+ <section style="background-color: #000;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            {{-- Image Avatar --}}
+            <img src="{{ auth()->user()->avatar }}" alt="Avatar" class="img-fluid rounded-circle mx-auto" style="width: 150px; height: 150px;">
+            {{-- Nama --}}
+            {{-- <h5 class="my-3">{{ auth()->user()->name }}</h5> --}}
+            {{-- Keterangan --}}
+            <div class="d-flex justify-content-center mb-2">
+              {{-- <form action="{{ route('logout') }}" method="post">
+              @csrf
+              <input type="submit" class="btn btn-outline-dark" value="Logout">
+              </form> --}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Full Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ auth()->user()->name }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ auth()->user()->email }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Phone</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ auth()->user()->phone }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Address</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ auth()->user()->address }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <form action="{{ route('logout') }}" method="post">
+                  @csrf
+                  <input type="submit" class="btn btn-outline-dark" value="Logout">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 
 </body>
